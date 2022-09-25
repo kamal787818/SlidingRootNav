@@ -87,6 +87,7 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
 
         if (listener != null) {
             listener.onItemSelected(position);
+
         }
     }
 

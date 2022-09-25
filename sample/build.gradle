@@ -26,4 +26,6 @@ dependencies {
     implementation deps.recycler
 
     implementation project(':library')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }

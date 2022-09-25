@@ -1,8 +1,10 @@
 package com.yarolegovich.slidingrootnav.sample;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
+import com.yarolegovich.slidingrootnav.sample.fragment.Listings;
 import com.yarolegovich.slidingrootnav.sample.menu.DrawerAdapter;
 import com.yarolegovich.slidingrootnav.sample.menu.DrawerItem;
 import com.yarolegovich.slidingrootnav.sample.menu.SimpleItem;
@@ -39,7 +42,6 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
     private static final int POS_Performance = 8;
     private static final int POS_Buyer_Question = 9;
     private static final int POS_My_Tickets = 10;
-
 
 
 
@@ -86,10 +88,24 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                 adapter.setListener(this);
 
 
+
+
                 RecyclerView list = findViewById(R.id.list);
         list.setNestedScrollingEnabled(false);
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
+        adapter.setListener(new DrawerAdapter.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int position) {
+                switch (position){
+                    case 1:
+                        Toast.makeText(SampleActivity.this, "Ho  Raha Hai", Toast.LENGTH_SHORT).show();
+                      getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,new Listings()).commit();
+
+
+                }
+            }
+        });
 
         adapter.setSelected(POS_DASHBOARD);
     }
