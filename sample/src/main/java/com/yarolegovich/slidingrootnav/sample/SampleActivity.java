@@ -32,7 +32,18 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
     private static final int POS_ACCOUNT = 1;
     private static final int POS_MESSAGES = 2;
     private static final int POS_CART = 3;
-    private static final int POS_LOGOUT = 5;
+    private static final int POS_PAYMENT = 4;
+    private static final int POS_GRowth = 5;
+    private static final int POS_PRICE_RECOOMENDATION = 6;
+    private static final int POS_Seller_Prestige = 7;
+    private static final int POS_Performance = 8;
+    private static final int POS_Buyer_Question = 9;
+    private static final int POS_My_Tickets = 10;
+
+
+
+
+    private static final int POS_LOGOUT = 12;
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
@@ -63,6 +74,13 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                 createItemFor(POS_ACCOUNT),
                 createItemFor(POS_MESSAGES),
                 createItemFor(POS_CART),
+                createItemFor(POS_PAYMENT),
+                createItemFor(POS_GRowth),
+                createItemFor(POS_PRICE_RECOOMENDATION),
+                createItemFor(POS_Seller_Prestige),
+                createItemFor(POS_Performance),
+                createItemFor(POS_Buyer_Question),
+                createItemFor(POS_My_Tickets),
                 new SpaceItem(48),
                 createItemFor(POS_LOGOUT)));
                 adapter.setListener(this);

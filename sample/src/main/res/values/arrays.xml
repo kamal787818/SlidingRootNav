@@ -6,8 +6,13 @@
         <item>Listings</item>
         <item>Brand Approval</item>
         <item>Order</item>
-        <item>Return</item>
         <item>Payments</item>
+        <item>Growth Central</item>
+        <item>Price Recommendations</item>
+        <item>Seller Prestige</item>
+        <item>Performance</item>
+        <item>Buyer Question</item>
+        <item>My Tickets</item>
         <item />
         <item>Log Out</item>
     </string-array>
@@ -16,6 +21,13 @@
         <item>@drawable/ic_home_outline_grey600_24dp</item>
         <item>@drawable/ic_account_outline_grey600_24dp</item>
         <item>@drawable/ic_email_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
+        <item>@drawable/ic_cart_outline_grey600_24dp</item>
         <item>@drawable/ic_cart_outline_grey600_24dp</item>
         <item>0</item>
         <item>@drawable/ic_logout_grey600_24dp</item>
