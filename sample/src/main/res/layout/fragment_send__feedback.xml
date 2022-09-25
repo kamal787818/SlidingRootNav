@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.Send_Feedback">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+
+            android:text="Do you find this app useful?"
+            android:textColor="#605E5E" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="yes"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l1"
+
+        android:layout_marginTop="20dp"
+        android:text="How could we make this app more useful"
+
+        android:textSize="10dp"></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_textinputlayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/text11"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:background="@drawable/bg_button"
+        android:hint="Suggestion"
+        android:paddingStart="35dp"
+        android:paddingRight="25dp"
+        android:textColorHint="#008643"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/suggestion"
+
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/no_bckgrnd"
+            android:inputType="textMultiLine"
+            android:textColor="#216afc" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/continue_button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_textinputlayout"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/continue_background"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:id="@+id/investcard"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        app:cardElevation="10dp"-->
+<!--        app:cardCornerRadius="30dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_below="@+id/text11"-->
+<!--        android:background="@drawable/round_corner">-->
+
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="109dp"-->
+<!--            android:background="#EAEFF4"-->
+<!--            android:hint="Suggestion......"-->
+<!--            android:textColorHint="#123">-->
+
+<!--        </EditText>-->
+
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+
+
+</RelativeLayout>

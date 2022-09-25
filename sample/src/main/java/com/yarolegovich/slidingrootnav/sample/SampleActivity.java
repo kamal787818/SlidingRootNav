@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.sample.fragment.Listings;
+import com.yarolegovich.slidingrootnav.sample.fragment.Send_Feedback;
 import com.yarolegovich.slidingrootnav.sample.menu.DrawerAdapter;
 import com.yarolegovich.slidingrootnav.sample.menu.DrawerItem;
 import com.yarolegovich.slidingrootnav.sample.menu.SimpleItem;
@@ -42,10 +43,11 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
     private static final int POS_Performance = 8;
     private static final int POS_Buyer_Question = 9;
     private static final int POS_My_Tickets = 10;
+    private static final int POS_SEND_FEEDBACK= 11;
 
 
 
-    private static final int POS_LOGOUT = 12;
+    private static final int POS_LOGOUT = 13;
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
@@ -83,6 +85,7 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                 createItemFor(POS_Performance),
                 createItemFor(POS_Buyer_Question),
                 createItemFor(POS_My_Tickets),
+                createItemFor(POS_SEND_FEEDBACK),
                 new SpaceItem(48),
                 createItemFor(POS_LOGOUT)));
                 adapter.setListener(this);
@@ -101,7 +104,9 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                     case 1:
                         Toast.makeText(SampleActivity.this, "Ho  Raha Hai", Toast.LENGTH_SHORT).show();
                       getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,new Listings()).commit();
-
+                      break;
+                    case 11:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,new Send_Feedback()).commit();
 
                 }
             }
@@ -116,8 +121,8 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
             finish();
         }
         slidingRootNav.closeMenu();
-        Fragment selectedScreen = CenteredTextFragment.createFor(screenTitles[position]);
-        showFragment(selectedScreen);
+//        Fragment selectedScreen = CenteredTextFragment.createFor(screenTitles[position]);
+//        showFragment(selectedScreen);
     }
 
     private void showFragment(Fragment fragment) {
