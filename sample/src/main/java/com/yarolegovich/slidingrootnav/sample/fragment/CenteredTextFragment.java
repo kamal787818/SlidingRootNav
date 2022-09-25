@@ -9,17 +9,17 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.tabs.TabLayout;
 import com.yarolegovich.slidingrootnav.sample.R;
 
 
+/**
+ * Created by yarolegovich on 25.03.2017.
+ */
 
 public class CenteredTextFragment extends Fragment {
 
     private static final String EXTRA_TEXT = "text";
-
 
     public static CenteredTextFragment createFor(String text) {
         CenteredTextFragment fragment = new CenteredTextFragment();
@@ -32,25 +32,19 @@ public class CenteredTextFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-       return inflater.inflate(R.layout.fragment_text, container, false);
+        return inflater.inflate(R.layout.fragment_text, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         Bundle args = getArguments();
         final String text = args != null ? args.getString(EXTRA_TEXT) : "";
-//        TextView textView = view.findViewById(R.id.text);
-//       textView.setText(text);
-//         textView.setOnClickListener(new View.OnClickListener() {
-//            @Override public void onClick(View v) {
-//                Toast.makeText(getContext(), "click", Toast.LENGTH_SHORT).show();
-//
-//                //getFragmentManager().beginTransaction().replace(R.id.container,new Listings());
-//
-//
-//            Toast.makeText(v.getContext(), text, Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        TextView textView = view.findViewById(R.id.text);
+        textView.setText(text);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Toast.makeText(v.getContext(), text, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
