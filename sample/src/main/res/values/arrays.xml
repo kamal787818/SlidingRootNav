@@ -2,10 +2,12 @@
 <resources>
 
     <string-array name="ld_activityScreenTitles">
-        <item>Dashboard</item>
-        <item>My Account</item>
-        <item>Messages</item>
-        <item>Cart</item>
+        <item>Home</item>
+        <item>Listings</item>
+        <item>Brand Approval</item>
+        <item>Order</item>
+        <item>Return</item>
+        <item>Payments</item>
         <item />
         <item>Log Out</item>
     </string-array>

@@ -24,9 +24,7 @@ import com.yarolegovich.slidingrootnav.sample.fragment.CenteredTextFragment;
 
 import java.util.Arrays;
 
-/**
- * Created by yarolegovich on 25.03.2017.
- */
+
 
 public class SampleActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener {
 
@@ -67,9 +65,10 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                 createItemFor(POS_CART),
                 new SpaceItem(48),
                 createItemFor(POS_LOGOUT)));
-        adapter.setListener(this);
+                adapter.setListener(this);
 
-        RecyclerView list = findViewById(R.id.list);
+
+                RecyclerView list = findViewById(R.id.list);
         list.setNestedScrollingEnabled(false);
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
