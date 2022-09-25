@@ -104,9 +104,17 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                     case 1:
                         Toast.makeText(SampleActivity.this, "Ho  Raha Hai", Toast.LENGTH_SHORT).show();
                       getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,new Listings()).commit();
+
+                        slidingRootNav.closeMenu();
+                        Fragment selectedScreen = CenteredTextFragment.createFor(screenTitles[position]);
+                        showFragment(selectedScreen);
                       break;
                     case 11:
                         getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,new Send_Feedback()).commit();
+
+                        slidingRootNav.closeMenu();
+                        Fragment selectedScreen1 = CenteredTextFragment.createFor(screenTitles[position]);
+                        showFragment(selectedScreen1);
 
                 }
             }
@@ -121,8 +129,8 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
             finish();
         }
         slidingRootNav.closeMenu();
-//        Fragment selectedScreen = CenteredTextFragment.createFor(screenTitles[position]);
-//        showFragment(selectedScreen);
+     Fragment selectedScreen = CenteredTextFragment.createFor(screenTitles[position]);
+        showFragment(selectedScreen);
     }
 
     private void showFragment(Fragment fragment) {
