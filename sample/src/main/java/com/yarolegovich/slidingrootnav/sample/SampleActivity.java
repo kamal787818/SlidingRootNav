@@ -101,7 +101,9 @@ public class SampleActivity extends AppCompatActivity implements DrawerAdapter.O
                     case 1:
                         Toast.makeText(SampleActivity.this, "Ho  Raha Hai", Toast.LENGTH_SHORT).show();
                       getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,new Listings()).commit();
-
+                        slidingRootNav.closeMenu();
+                        Fragment selectedScreen = CenteredTextFragment.createFor(screenTitles[position]);
+                        showFragment(selectedScreen);
 
                 }
             }
